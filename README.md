@@ -1,5 +1,7 @@
 # What is this?
 
+[![Build Status](https://travis-ci.org/tarvainen/abv-calculator.svg?branch=master)](https://travis-ci.org/tarvainen/abv-calculator)
+
 This is a simple ABV (**A**lcohol **B**y **V**olume) calculator
 
 ## Installation
