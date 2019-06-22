@@ -1,3 +1,4 @@
+sudo: required
 services:
   - docker
 
@@ -5,5 +6,11 @@ language: node_js
 node_js:
   - '10'
 
-build:
+before_install:
   - docker build -t tarvainen/abv-calculator .
+
+deploy:
+  provider: script
+  script: bash docker_push.sh
+  on:
+    branch: master
