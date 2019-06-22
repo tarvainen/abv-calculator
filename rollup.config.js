@@ -5,6 +5,8 @@ import html from 'rollup-plugin-bundle-html'
 import { uglify } from 'rollup-plugin-uglify'
 import babel from 'rollup-plugin-babel'
 
+const doServe = process.env.SERVE
+
 module.exports = {
   input: 'src/main.js',
   output: {
@@ -28,7 +30,7 @@ module.exports = {
       exclude: 'node_modules/**'
     }),
     uglify(),
-    serve({
+    doServe && serve({
       open: true,
       contentBase: 'dist',
       port: 8000
